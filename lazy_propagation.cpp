@@ -21,7 +21,7 @@ int update(int node,int l,int r,int a,int b,int val) {
     if (lazy[node] != 0) {
         //Update it
         st[node] += (r-l+1)*lazy[node];
-        //Not leaf node them Make child lazy
+        //Not leaf node then Make child lazy
         if (l != r) {
             lazy[node*2] += lazy[node];
             lazy[node*2+1] += lazy[node];
